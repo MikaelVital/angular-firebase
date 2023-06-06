@@ -14,19 +14,20 @@ import { AuthService } from './auth.service';
     BrowserModule,
     FormsModule,
     AngularFireModule.initializeApp({
-      apiKey: 'AIzaSyB_FdSlaAiMNzB6ZrgpMLYm3u-NBZFPGRY',
-      authDomain: 'angularlist-a6ac3.firebaseapp.com',
-      databaseURL: 'https://angularlist-a6ac3.firebaseio.com',
-      projectId: 'angularlist-a6ac3',
-      storageBucket: 'angularlist-a6ac3.appspot.com',
-      messagingSenderId: '75663811126',
-      appId: '1:75663811126:web:86d08cee0c83ff918e2e97',
+      apiKey: 'AIzaSyDgemol9u4nSBU9i71yIbHyirCoYL8hgcI',
+      authDomain: 'angularcar-17300.firebaseapp.com',
+      databaseURL: 'https://angularcar-17300-default-rtdb.firebaseio.com',
+      projectId: 'angularcar-17300',
+      storageBucket: 'angularcar-17300.appspot.com',
+      messagingSenderId: '767991644645',
+      appId: '1:767991644645:web:12aa9f05213c418fa36f0c',
+      measurementId: 'G-PK92DGTYJ9',
     }),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
   ],
   declarations: [RootComponent],
   bootstrap: [RootComponent],
-  providers: [AuthService]
+  providers: [AuthService],
 })
 export class AppModule {}
