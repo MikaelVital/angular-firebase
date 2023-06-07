@@ -1,11 +1,11 @@
 <div *ngIf="!auth.user">
-  <h1>Projeto Revise Login</h1>
+  <h1>Projeto Revise</h1>
   <form>
-    <fieldset>
+    <fieldset class="label">
       <legend>Login</legend>
-      <div>Digite seu Email</div>
+      <div class="label">Digite seu Email</div>
       <input type="text" name="email" [(ngModel)]="email" />
-      <div>Digite sua Senha</div>
+      <div class="label">Digite sua Senha</div>
       <input type="password" name="password" [(ngModel)]="password" />
       <hr />
       <button (click)="auth.emailSignin(this.email, this.password)">
@@ -21,6 +21,7 @@
   {{ auth.error }}
 </div>
 <div *ngIf="auth.user">
+  <app-navbar></app-navbar>
   <div class="container-fluid m-2">
     <router-outlet></router-outlet>
   </div>
