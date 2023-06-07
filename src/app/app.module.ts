@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PecasComponent } from './pecas/pecas.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     CommonModule,
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot([{ path: 'cadastro', component: CadastroComponent }]),
+    RouterModule.forRoot([
+      { path: 'cadastro', component: CadastroComponent },
+      { path: 'pecas', component: PecasComponent },
+    ]),
     AngularFireModule.initializeApp({
       apiKey: 'AIzaSyDgemol9u4nSBU9i71yIbHyirCoYL8hgcI',
       authDomain: 'angularcar-17300.firebaseapp.com',
@@ -32,7 +36,12 @@ import { NavbarComponent } from './navbar/navbar.component';
     AngularFireAuthModule,
     AngularFireDatabaseModule,
   ],
-  declarations: [RootComponent, CadastroComponent, NavbarComponent],
+  declarations: [
+    RootComponent,
+    CadastroComponent,
+    NavbarComponent,
+    PecasComponent,
+  ],
   bootstrap: [RootComponent],
   providers: [AuthService],
 })
