@@ -7,12 +7,18 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AuthService } from './auth.service';
+import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   imports: [
+    HttpClientModule,
     CommonModule,
     BrowserModule,
     FormsModule,
+    RouterModule.forRoot([{ path: 'cadastro', component: CadastroComponent }]),
     AngularFireModule.initializeApp({
       apiKey: 'AIzaSyDgemol9u4nSBU9i71yIbHyirCoYL8hgcI',
       authDomain: 'angularcar-17300.firebaseapp.com',
@@ -26,7 +32,7 @@ import { AuthService } from './auth.service';
     AngularFireAuthModule,
     AngularFireDatabaseModule,
   ],
-  declarations: [RootComponent],
+  declarations: [RootComponent, CadastroComponent, NavbarComponent],
   bootstrap: [RootComponent],
   providers: [AuthService],
 })

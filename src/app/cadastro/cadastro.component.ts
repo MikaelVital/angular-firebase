@@ -16,11 +16,11 @@ export interface Item {
 }
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './root.component.html',
-  styleUrls: ['./root.component.css'],
+  selector: 'app-cadastro',
+  templateUrl: './cadastro.component.html',
+  styleUrls: ['./cadastro.component.css'],
 })
-export class RootComponent implements OnInit {
+export class CadastroComponent implements OnInit {
   email = '' as string;
   password = '' as string;
 
